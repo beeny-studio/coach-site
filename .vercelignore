@@ -1,0 +1,5 @@
+# 배포된 사이트에서 보이지 않게 할 파일 (GitHub에는 그대로 남습니다)
+prd-*.md
+README.md
+supabase/
+.claude/
