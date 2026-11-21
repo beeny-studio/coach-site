@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>임원 코칭 · 리더십 강연</title>
+  <meta name="description" content="대기업 임원·리더를 위한 1:1 임원 코칭과 리더십 강연·워크숍">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" data-text="coachName"></a>
+      <a class="topbar-cta" href="#inquiry">문의하기</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ① 첫 화면 -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow" data-text="hero.eyebrow"></p>
+        <h1 class="hero-title" data-text="hero.headline"></h1>
+        <p class="hero-sub" data-text="hero.subline"></p>
+        <div class="hero-meta">
+          <span class="hero-name" data-text="coachName"></span>
+          <span class="hero-role" data-text="coachTitle"></span>
+        </div>
+        <a class="btn btn-primary" href="#inquiry" data-text="hero.buttonText"></a>
+      </div>
+    </section>
+
+    <!-- ② 소개 -->
+    <section class="section" id="about">
+      <div class="wrap grid-2">
+        <h2 class="section-title" data-text="about.title"></h2>
+        <div>
+          <p class="lead" data-text="about.philosophy"></p>
+          <ul class="list-check" data-list="about.career"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 프로그램 -->
+    <section class="section section-alt" id="programs">
+      <div class="wrap">
+        <h2 class="section-title" data-text="programs.title"></h2>
+        <div class="cards" id="program-cards"></div>
+      </div>
+    </section>
+
+    <!-- ④ 자격 -->
+    <section class="section" id="credentials">
+      <div class="wrap grid-2">
+        <h2 class="section-title" data-text="credentials.title"></h2>
+        <ul class="list-check" data-list="credentials.items"></ul>
+      </div>
+    </section>
+
+    <!-- ⑤ 강연·강의 이력 -->
+    <section class="section section-alt" id="history">
+      <div class="wrap">
+        <h2 class="section-title" data-text="history.title"></h2>
+        <p class="muted" data-text="history.note"></p>
+        <ul class="chips" data-list="history.clients"></ul>
+        <ul class="list-topics" data-list="history.topics"></ul>
+      </div>
+    </section>
+
+    <!-- ⑥ 문의 양식 -->
+    <section class="section section-dark" id="inquiry">
+      <div class="wrap grid-2">
+        <div>
+          <h2 class="section-title" data-text="inquiry.title"></h2>
+          <p class="lead" data-text="inquiry.lead"></p>
+          <p class="muted small">양식이 열리지 않으면 <a class="link-light" data-email="contactEmail"></a> 로 메일 주세요.</p>
+        </div>
+
+        <form class="form" id="inquiry-form" novalidate>
+          <div class="field">
+            <label for="f-company">회사명 <span class="req">*</span></label>
+            <input id="f-company" name="company" type="text" maxlength="100" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="f-name">담당자 이름 <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" maxlength="50" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-contact">연락처 (이메일 또는 전화번호) <span class="req">*</span></label>
+            <input id="f-contact" name="contact" type="text" maxlength="100" autocomplete="email" required>
+          </div>
+          <fieldset class="field">
+            <legend>관심 프로그램 <span class="req">*</span></legend>
+            <div class="radios" id="program-options"></div>
+          </fieldset>
+          <div class="field">
+            <label for="f-message">문의 내용 <span class="opt">(선택)</span></label>
+            <textarea id="f-message" name="message" rows="5" maxlength="2000"></textarea>
+          </div>
+
+          <!-- 스팸 방지용 숨은 칸: 사람은 보이지 않아 채우지 않습니다 -->
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">웹사이트</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="consent">
+            <label class="checkbox">
+              <input id="f-consent" name="consent" type="checkbox" required>
+              <span data-text="inquiry.consentTitle"></span>
+            </label>
+            <p class="consent-text" data-text="inquiry.consentText"></p>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-primary btn-block" type="submit" id="submit-btn" data-text="inquiry.submitText"></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> <span data-text="coachName"></span></span>
+    </div>
+  </footer>
+
+  <noscript><p class="noscript">이 페이지는 자바스크립트가 켜져 있어야 보입니다.</p></noscript>
+
+  <script src="assets/content.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
