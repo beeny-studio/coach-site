@@ -12,6 +12,6 @@
  * ⚠ service_role 키 / Secret 키(sb_secret_...)는 절대 여기 넣지 마세요.
  */
 window.SUPABASE_CONFIG = {
-  url: "",
-  key: "",
+  url: "https://fhydnxovynxqzoqsauok.supabase.co",
+  key: "sb_publishable_7HdXHX8eW2z-BnT17y3spw_CecHPZhe",
 };
